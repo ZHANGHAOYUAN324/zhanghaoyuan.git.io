@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haoyuan Zhang - Personal Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        nav {
+            background-color: #34495e;
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #3498db;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            flex: 1 1 300px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .card p {
+            margin-bottom: 1rem;
+        }
+        
+        .card ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card a {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .card a:hover {
+            background-color: #2980b9;
+        }
+        
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+        }
+        
+        .profile-info h1 {
+            margin-bottom: 0.5rem;
+            color: white;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .profile-info p {
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        .contact-link {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            background-color: transparent;
+            padding: 0;
+            display: inline;
+            border-radius: 0;
+        }
+        
+        .contact-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
+            background-color: transparent;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-section">
+                <img src="image/5566.jpg" alt="Your Profile Picture" class="profile-image">
+                <div class="profile-info">
+                    <h1 style="color: white;">Haoyuan Zhang</h1>
+                    <p>Ph.D. Candidate | Data Analyst</p>
+                    <p>Email: zhanghaoyuan324@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#academic">Academic</a></li>
+            <li><a href="#professional">Professional</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="home">
+            <h2>About Me</h2>
+            <p>Welcome to my personal website. My name is Haoyuan Zhang professional with experience in data science and machine learning. I am currently pursuing opportunities in both academic and professional environments.</p>
+            
+            <div class="main-content">
+                <div class="card">
+                    <h2>Academic Background</h2>
+                    <p>I have a robust background in mathematics, data science, and machine learning, specializing in Python and C++.</p>
+                    <a href="#academic">Learn More</a>
+                </div>
+                
+                <div class="card">
+                    <h2>Professional Experience</h2>
+                    <p>I have completed multiple projects in data science and investment, allowing me to build strong expertise in data analysis..</p>
+                    <a href="#professional">Learn More</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="academic">
+            <h2>Academic Portfolio</h2>
+            <p>Here you will find information about my academic background, research interests.</p>
+            
+            <div class="main-content">
+                <div class="card">
+                    <h2>Education</h2>
+                    <ul>
+                        <li>
+                            <strong>Master's Degree in Environmental Data science and Machine learning</strong><br>
+                            Imperial college London, 2024-2025<br>
+                            
+                        </li>
+                        <li>
+                            <strong>Bachelor's Degree in Math and Statistics</strong><br>
+                            The University of Edinburgh, 2020-2024
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h2>Research Interests</h2>
+                    <ul>
+                        <li>Medical image segmentation</li>
+                        <li>Weather environment prediction</li>
+                        <li>CT image restoration</li>
+                        <li>Operational research </li>
+                    </ul>
+                    <a href="projects.html">View All Projects</a>
+                </div>
+                
+                <div class="card">
+                    <h2>PhD Application Statement</h2>
+                    <div id="short-statement">
+                        <p>I am interested in pursuing a PhD in machine learning, with a particular emphasis on predictive modeling and segmentation techniques. My primary research objectives involve developing sophisticated machine learning algorithms and methodologies to address complex, practical challenges across diverse domains.</p>
+                        <button id="read-more-btn" onclick="toggleStatement()">Read More</button>
+                    </div>
+                    <div id="full-statement" style="display: none;">
+                        <p>I am interested in pursuing a PhD in machine learning, with a particular emphasis on predictive modeling and segmentation techniques. My primary research objectives involve developing sophisticated machine learning algorithms and methodologies to address complex, practical challenges across diverse domains. I am particularly motivated by interdisciplinary research opportunities, including applications in environmental sustainability, healthcare innovation, and advancements in robotics. Additionally, I remain open and enthusiastic about exploring other promising research directions, leveraging machine learning to create meaningful and impactful technological solutions.</p>
+                        <p>I am especially keen on collaborating with professors whose expertise lies in the practical implementation and interdisciplinary integration of machine learning. I look forward to contributing to dynamic research teams, participating in innovative projects, and further developing my skills through rigorous academic investigation and real-world application.</p>
+                        <button id="read-less-btn" onclick="toggleStatement()">Read Less</button>
+                    </div>
+                    <a href="#contact">Contact Me</a>
+                </div>
+            </div>
+        
+            <script>
+                function toggleStatement() {
+                    var shortStatement = document.getElementById('short-statement');
+                    var fullStatement = document.getElementById('full-statement');
+                    
+                    if (shortStatement.style.display === 'none') {
+                        shortStatement.style.display = 'block';
+                        fullStatement.style.display = 'none';
+                    } else {
+                        shortStatement.style.display = 'none';
+                        fullStatement.style.display = 'block';
+                    }
+                }
+            </script>
+        </section>
+        
+        <section id="professional">
+            <h2>Professional Portfolio</h2>
+            <p>Here you will find information about my professional experience, skills, and projects.</p>
+            
+            <div class="main-content">
+                <div class="card">
+                    <h2>Work Experience</h2>
+                    <div id="work-exp-short">
+                        <ul>
+                            <li>
+                                <strong>Data analysis intern</strong><br>
+                                miracleplus, BeiJing<br>
+                                2024.4 - 2024.9<br>
+                                <ul>
+                                    <li>Conducted data extraction, transformation, and loading (ETL) to prepare large datasets for analysis.</li>
+                                    <li>Analyzed extensive datasets to identify trends, patterns, and insights supporting strategic business decisions</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button id="work-more-btn" onclick="toggleWorkExperience()">Read More</button>
+                    </div>
+                    
+                    <div id="work-exp-full" style="display: none;">
+                        <ul>
+                            <li>
+                                <strong>Data analysis intern</strong><br>
+                                miracleplus, BeiJing<br>
+                                2024.4 - 2024.9<br>
+                                <ul>
+                                    <li>Conducted data extraction, transformation, and loading (ETL) to prepare large datasets for analysis.</li>
+                                    <li>Analyzed extensive datasets to identify trends, patterns, and insights supporting strategic business decisions</li>
+                                    <li>Created data visualization dashboards and reports using analytical tools (Python, SQL) to clearly communicate findings to management and stakeholders.</li>
+                                    <li>Collaborated closely with product and marketing teams to interpret analytical results and implement data-driven strategies</li>
+                                    <li>Assisted in building predictive models to forecast customer behaviors and business outcomes.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Data analysis intern</strong><br>
+                                Olachat, Wuhan<br>
+                                2023.3 - 2023.9<br>
+                                <ul>
+                                    <li>Performed detailed data analysis to identify high-value user segments and optimize user engagement strategies.</li>
+                                    <li>Leveraged analytical tools and algorithms to personalize content distribution, effectively targeting specific user preferences.</li>
+                                    <li>Collaborated cross-functionally with the product and marketing teams to translate data insights into actionable strategies aimed at boosting user activity and monetization.</li>
+                                    <li>Monitored and analyzed key performance indicators (KPIs), providing regular reports and recommendations for operational improvements.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button id="work-less-btn" onclick="toggleWorkExperience()">Read Less</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Proficient in data analytics and visualization (Python, SQL)</li>
+                        <li>Experienced in algorithm-based content personalization</li>
+                        <li>Skilled in predictive modeling and ETL processes </li>
+                        <li>Strong teamwork and cross-functional collaboration</li>
+                        <li>Excellent communication and presentation abilities</li>
+                        <li>Proactive problem-solving and analytical thinking</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h2>Projects</h2>
+                    <ul>
+                        <li>
+                            <strong>User Segmentation and Personalization (OlaChat)</strong><br>
+                            Conducted detailed user data analysis to identify key segments, successfully increasing user acquisition by 20% and user revenue by 40% through personalized content recommendations.
+                        </li>
+                        <li>
+                            <strong>Predictive Analytics and ETL Optimization (MiraclePlus)</strong><br>
+                            Developed predictive models and streamlined data processing workflows, reducing data processing time by 25%, significantly improving operational efficiency and enabling better strategic decision-making.
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h2>Resume</h2>
+                    <p>Download my full resume for more detailed information about my professional background.</p>
+                    <a href="Haoyuan_Zhang_CV.pdf">Download CV (PDF)</a>
+                </div>
+            </div>
+        
+            <script>
+                function toggleWorkExperience() {
+                    var shortExp = document.getElementById('work-exp-short');
+                    var fullExp = document.getElementById('work-exp-full');
+                    
+                    if (shortExp.style.display === 'none') {
+                        shortExp.style.display = 'block';
+                        fullExp.style.display = 'none';
+                    } else {
+                        shortExp.style.display = 'none';
+                        fullExp.style.display = 'block';
+                    }
+                }
+            </script>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me for academic collaborations, job opportunities, or any other inquiries.</p>
+            
+            <div class="main-content">
+                <div class="card">
+                    <h2>Contact Information</h2>
+                    <ul>
+                        <li>Email: <a href="mailto:zhanghaoyuan324@gmail.com" style="background-color: transparent; color: #3498db; text-decoration: none; display: inline; padding: 0; border-radius: 0; box-shadow: none;">zhanghaoyuan324@gmail.com</a></li>
+                        <li>Phone: +44(0)7529226273</li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/haoyuan-zhang-a174a02a8/" style="background-color: transparent; color: #3498db; text-decoration: none; display: inline; padding: 0; border-radius: 0; box-shadow: none;" target="_blank">Haoyuan Zhang</a></li>
+                        <li>GitHub: <a href="https://github.com/ZHANGHAOYUAN324" style="background-color: transparent; color: #3498db; text-decoration: none; display: inline; padding: 0; border-radius: 0; box-shadow: none;" target="_blank">ZHANGHAOYUAN324</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Haoyuan Zhang. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

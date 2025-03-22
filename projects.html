@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haoyuan Zhang - Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        nav {
+            background-color: #34495e;
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #3498db;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .project-card {
+            flex: 1 1 100%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .project-card p {
+            margin-bottom: 1rem;
+        }
+        
+        .project-card ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            background-color: #e0f7fa;
+            color: #006064;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .back-link:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Haoyuan Zhang - Project Portfolio</h1>
+            <p>A showcase of my academic and professional projects</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#academic">Academic</a></li>
+            <li><a href="index.html#professional">Professional</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Main Page</a>
+        
+        <h2>My Projects</h2>
+        <p>Here's a comprehensive collection of projects I've worked on, showcasing my skills and experience in data science, machine learning, and environmental applications.</p>
+        
+        <div class="main-content">
+            <!-- Academic Research Projects -->
+
+            <div class="project-card">
+                <h2>Weather Data Imputation Using Deep Learning</h2>
+                <div class="project-meta">
+                    <span>Type: Time Series Data Processing</span>
+                    <span>Date: 2025</span>
+                </div>
+                <p>Developed a neural network architecture to recover missing daily weather measurements from a corrupted dataset spanning multiple decades. This project combined extensive data visualization, PyTorch-based data loading pipelines, and a custom deep learning model to accurately fill in missing values, resulting in a fully restored dataset ready for further meteorological analysis.</p>
+                <ul>
+                    <li>Implemented data exploration and visualization techniques, creating detailed line plots and histograms to compare weather variables before and after corruption, revealing the distribution and nature of missing values</li>
+                    <li>Constructed PyTorch data pipelines, building TensorDatasets for paired corrupted and uncorrupted training data, alongside a separate DataLoader for test data with missing values, ensuring efficient batch processing and model training</li>
+                    <li>Designed and trained a custom imputation network that learns temporal patterns in the data, accurately inferring and restoring missing measurements</li>
+                    <li>Employed careful hyperparameter tuning and loss function selection to maximize imputation accuracy; generated a final test_set_nogaps.csv conforming to the original data structure</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">Time Series</span>
+                    <span class="tag">Neural Networks</span>
+                    <span class="tag">Data Visualization</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h2>Enhanced Deep-GBLUP Model for Phenotype Prediction</h2>
+                <div class="project-meta">
+                    <span>Type: Academic Research</span>
+                    <span>Date: Summer 2023</span>
+                </div>
+                <p>Developed an advanced deep learning approach to improve genomic prediction accuracy through integration of specialized neural network architectures. This project extended traditional GBLUP models to capture complex, localized genomic patterns.</p>
+                <ul>
+                    <li>Integrated Locally Connected Layers (LCL) into the Deep-GBLUP model to capture complex, localized patterns</li>
+                    <li>Designed and implemented three subnetworks, optimizing loss functions and parameter updates for faster convergence</li>
+                    <li>Achieved significant improvement in predictive accuracy over traditional GBLUP models through rigorous statistical benchmarking</li>
+                    <li>Collaborated with supervisors Dr. Ivan Pocrnic and Dr. Stefano Cipolla to validate the methodology</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">Neural Networks</span>
+                    <span class="tag">Statistical Modeling</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h2>Cardiac CT Image Segmentation Using Advanced Algorithms</h2>
+                <div class="project-meta">
+                  <span>Type: Medical Image Processing</span>
+                  <span class="date">Date: 2025</span>
+                </div>
+              
+                <p>Developed comprehensive cardiac structure segmentation algorithms for analyzing heart CT images. This project combined multiple denoising methods, clustering techniques, and edge detection to accurately identify cardiac chambers and structures.</p>
+              
+                <ul>
+                  <li>Implemented multiple denoising methods including wavelet transforms, BM3D, and non-local means filtering to enhance image quality</li>
+                  <li>Developed K-means clustering and spectral clustering algorithms to segment cardiac structures with high accuracy</li>
+                  <li>Built edge-enhanced segmentation with adaptive feature weighting for precise heart chamber boundary detection</li>
+                  <li>Incorporated advanced graph-based methods and conditional random fields for optimized cardiac structure segmentation</li>
+                </ul>
+              
+                <div class="tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">OpenCV</span>
+                  <span class="tag">K-means Clustering</span>
+                  <span class="tag">Wavelet Transforms</span>
+                  <span class="tag">Edge Detection</span>
+                </div>
+              </div>
+              <div class="project-card">
+                <h2>Flood Risk Prediction Using Machine Learning</h2>
+                <p>
+                  <span class="label">Type:</span> Environmental Data Science &nbsp;&nbsp;
+                  <span class="label">Date:</span> 2025
+                </p>
+                <p>
+                  Developed a comprehensive machine learning system to predict flood risks across multiple regions in the UK. This project combined environmental data, historical flood records, and geographical information to provide actionable predictions and decision-making support for disaster prevention planning.
+                </p>
+                <ul>
+                  <li>Integrated and cleaned multi-source datasets including weather, topography, and infrastructure data for UK flood risk assessment</li>
+                  <li>Employed a <strong>Random Forest</strong> model for clustering and predicting flood risk across different postal code areas</li>
+                  <li>Developed an interactive map interface to visualize flood risk probabilities, aiding decision-makers in proactive planning</li>
+                  <li>Enhanced prediction accuracy by incorporating features such as rainfall, elevation, and river network distribution</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Random Forest</span>
+                    <span class="tag">GIS Integration</span>
+                    <span class="tag">Data Visualization</span>
+                </div>
+              </div>
+              
+              
+              <div class="project-card">
+                <h2>River Flow Forecast with LSTM</h2>
+                <p>
+                  <span class="label">Type:</span> Environmental Data Science &nbsp;&nbsp;
+                  <span class="label">Date:</span> 2025
+                </p>
+                <p>
+                  Implemented a deep learning model using <strong>LSTM (Long Short-Term Memory)</strong> to perform time series forecasting of river flow. This approach helps water resource management authorities proactively identify flood risks and make informed decisions.
+                </p>
+                <ul>
+                  <li>Collected and preprocessed extensive time series data on river levels and rainfall</li>
+                  <li>Built an LSTM network to learn long-term trends and accurately predict water levels and flow</li>
+                  <li>Improved model stability and accuracy using early stopping and hyperparameter tuning (e.g., learning rate, batch size)</li>
+                  <li>Developed an interactive dashboard to display forecast results in real time for monitoring and analysis</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">TensorFlow/Keras</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Data Visualization</span>
+                </div>
+              </div>
+
+            <div class="project-card">
+                <h2>University Timetable Optimization</h2>
+                <div class="project-meta">
+                    <span>Type: Operational Research</span>
+                    <span>Date: 2023</span>
+                </div>
+                <p>Applied advanced optimization techniques to solve the complex scheduling challenges faced by university administrators. The project developed a comprehensive system for optimizing room allocation, instructor availability, and student schedules.</p>
+                <ul>
+                    <li>Processed and analyzed course selection data to identify room availability and enrollment patterns</li>
+                    <li>Developed a constraint-based optimization model incorporating room capacities, timings, and schedules</li>
+                    <li>Evaluated multiple algorithms (genetic, simulated annealing, particle swarm), reducing scheduling conflicts by 30%</li>
+                    <li>Created a user-friendly interface for administrators to adjust parameters and visualize scheduling solutions</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Optimization Algorithms</span>
+                    <span class="tag">Data Analysis</span>
+                    <span class="tag">Constraint Programming</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h2>Eco-Financial Insights Using NLP</h2>
+                <div class="project-meta">
+                    <span>Type: Research Project</span>
+                    <span>Date: 2024</span>
+                </div>
+                <p>Developed specialized natural language processing techniques to extract and analyze environmental references in financial communications. This project created new methodologies for understanding how companies discuss environmental considerations in their financial reporting.</p>
+                <ul>
+                    <li>Created an eco-focused financial dictionary to enhance analysis of conference call transcripts</li>
+                    <li>Leveraged NLP techniques to extract and categorize financial data, streamlining environmentally relevant insights</li>
+                    <li>Implemented sentiment analysis to evaluate corporate environmental commitments</li>
+                    <li>Developed visualization tools to track environmental mentions across different industry sectors</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">NLP</span>
+                    <span class="tag">Text Mining</span>
+                    <span class="tag">Financial Analysis</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h2>CT Brain Image Restoration Using UNet</h2>
+                <div class="project-meta">
+                    <span>Type: Medical Imaging Research</span>
+                    <span>Date: 2025</span>
+                </div>
+                <p>Focused on developing algorithms to enhance and restore low-quality or degraded CT brain scan images. This project applied deep learning approaches to medical image restoration, addressing noise reduction, artifact removal, and resolution enhancement.</p>
+                <ul>
+                    <li>Developed a deep learning model based on UNet to reconstruct and enhance corrupted CT brain scans</li>
+                    <li>Implemented loss functions combining structural similarity (SSIM) and mean squared error (MSE) to improve reconstruction fidelity</li>
+                    <li>Validated model performance against real-world medical datasets, achieving high restoration accuracy and improved diagnostic quality</li>
+                    <li>Created a preprocessing pipeline to standardize diverse medical imaging inputs</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">UNet</span>
+                    <span class="tag">Medical Imaging</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h2>Flood Risk Prediction Using Machine Learning</h2>
+                <div class="project-meta">
+                    <span>Type: Environmental Data Science</span>
+                    <span>Date: 2025</span>
+                </div>
+                <p>Developed a comprehensive machine learning system for predicting flood risks across multiple UK locations. This project combined environmental data, historical flood records, and geographic information to create actionable predictions for disaster planning.</p>
+                <ul>
+                    <li>Curated and integrated diverse datasets for UK flood risk prediction</li>
+                    <li>Developed a Random Forest clustering model to forecast flood risks across multiple postcodes</li>
+                    <li>Built an interactive map interface enabling users to visualize flood risk probabilities, aiding proactive decision-making</li>
+                    <li>Incorporated rainfall, topography, and infrastructure data into the prediction model</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Random Forest</span>
+                    <span class="tag">GIS Integration</span>
+                    <span class="tag">Data Visualization</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h2>Lightning Prediction Using Multi-Modal Data and LSTM-UNet</h2>
+                <div class="project-meta">
+                    <span>Type: Environmental Forecasting</span>
+                    <span>Date: 2025</span>
+                </div>
+                <p>Created an advanced deep learning framework for predicting lightning occurrences in both quantity and spatial location. This project combined temporal sequence modeling with spatial analysis to create a comprehensive predictive system.</p>
+                <ul>
+                    <li>Designed a deep learning framework integrating LSTM and UNet to predict lightning occurrence in terms of quantity and spatial location</li>
+                    <li>Leveraged multi-modal datasets including satellite imagery, atmospheric sensor data, and historical lightning records</li>
+                    <li>Optimized temporal feature extraction using LSTM while incorporating spatial dependencies with UNet, significantly improving forecast accuracy</li>
+                    <li>Developed evaluation metrics specifically designed for spatial-temporal prediction tasks</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">LSTM</span>
+                    <span class="tag">UNet</span>
+                    <span class="tag">Multi-modal Learning</span>
+                    <span class="tag">Environmental Science</span>
+                </div>
+            </div>
+            
+            <!-- Professional Projects -->
+            <div class="project-card">
+                <h2>User Segmentation and Personalization (OlaChat)</h2>
+                <div class="project-meta">
+                    <span>Type: Professional</span>
+                    <span>Date: 2023</span>
+                </div>
+                <p>Conducted detailed user data analysis to identify key segments, successfully increasing user acquisition by 20% and user revenue by 40% through personalized content recommendations.</p>
+                <ul>
+                    <li>Analyzed user behavior patterns across multiple dimensions</li>
+                    <li>Developed clustering algorithms to identify user segments</li>
+                    <li>Created personalized content recommendation system</li>
+                    <li>Implemented A/B testing framework to validate effectiveness</li>
+                    <li>Generated weekly reports and dashboards for stakeholders</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Cluster Analysis</span>
+                    <span class="tag">Data Visualization</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h2>Predictive Analytics and ETL Optimization (MiraclePlus)</h2>
+                <div class="project-meta">
+                    <span>Type: Professional</span>
+                    <span>Date: 2024</span>
+                </div>
+                <p>Developed predictive models and streamlined data processing workflows, reducing data processing time by 25%, significantly improving operational efficiency and enabling better strategic decision-making.</p>
+                <ul>
+                    <li>Redesigned ETL processes to handle large-scale data more efficiently</li>
+                    <li>Built predictive models for customer churn and business outcomes</li>
+                    <li>Automated reporting processes reducing manual workload</li>
+                    <li>Created interactive dashboards for real-time data monitoring</li>
+                    <li>Implemented data quality control measures</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">ETL</span>
+                    <span class="tag">Predictive Modeling</span>
+                    <span class="tag">Data Pipeline</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Haoyuan Zhang. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
